@@ -1,0 +1,40 @@
+
+#header-main .logo a {
+
+    font-size: 0;
+    height: 26px;
+    position: relative;
+    top: 8px;
+    width: 160px;
+    z-index: 100;
+}
+h1{
+    color: burlywood;
+}
+p{ 
+    color: cornflowerblue;
+}
+h2{
+    color: crimson;
+}
+.listaItem {
+    list-style: none;
+
+}
+.listaItem a {
+    text-decoration: none;
+    color: black;
+
+}
+.body{
+    background-color: black;
+  }
+
+.is-desktop .aspect_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
