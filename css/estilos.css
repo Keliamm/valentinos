@@ -10,8 +10,58 @@
    body{
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 25px;
+    line-height: 40px;
    }
+   /* INDEX  */
+   /* GRIDS */
+   .containerGridsIndex {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+
+   }
+   /*menu hamburgesa*/
+   .lbl-menu{
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+	transform: scale(1.2);
+}
+.lbl-menu #spn1,#spn2,#spn3{
+    position: absolute;
+    content: '';
+    background:#ffff;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+#spn2{
+    top: 12px;
+}
+#spn3{
+    top: 23px;
+}
+#btn-menu{
+    display: none;
+}
+#btn-menu:checked ~ .lbl-menu #spn1{
+    transform: rotate(140deg);
+    top: 10px;
+}
+#btn-menu:checked ~ .lbl-menu #spn2{
+    opacity: 0;
+}
+#btn-menu:checked ~ .lbl-menu #spn3{
+    transform: rotate(-140deg);
+    top: 10px;
+}
+/*termina aca*/
 .flex-container{
+    
+    display: flex;
     padding: 10px 0;
     width: 90%;
     max-width: 1000px;
@@ -19,8 +69,7 @@
     overflow: hidden;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 .titulos{
     color: #000;
@@ -29,17 +78,34 @@
     margin-bottom: 60px;
 }
 header{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, rgb(0, 0, 0), hsla(0, 0%, 26%, 0)), url(../Assets/img/hombre-joven-botella-alcohol-traje.jpg);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, rgb(0, 0, 0), hsla(0, 1%, 36%, 0)), url(../Assets/img/hombre-joven-botella-alcohol-traje.jpg);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
+   
 }
 nav{
     text-align: right;
+}
+.menu2{
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 5px;
+}
+header label:hover{
+cursor: pointer;
+background: rgb(0,0,0,0,3);
 }
 .listaItem{
     display: inline-block;
@@ -47,21 +113,84 @@ nav{
     text-decoration: none;
     margin-right: 50px;
     padding: 0px 125px 0 0;
+    
 }
 .listaItem >a{
-    color: #fff;;
+    color: #fff;
+
+
 }
 .listaItem >a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .parrafos{
-    padding:30px;
+    padding:10px;
     
     text-align: center;
-    margin: 50px;
-    letter-spacing: 10px;
+    margin: 25px;
+    letter-spacing: 5px;
 }
 .instagram{
-        display: flex;
-        justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+.principal{
+    display: flex;
+    justify-content: center;
+}
+.foter{
+    background: linear-gradient(rgb(0, 0, 0), hsla(0, 0%, 0%, 0.884));
+    width: 100%;
+    height: 35vh;
+}
+.foter >p{
+    color: #fff;}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    padding: 20px;
+    grid-gap: 10px;
+}
+.moda {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.moda1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(-130px);
+    
+}
+.moda2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.moda3{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(-130px);
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .listaItem{
+        display: block;
+        font-weight: 400;
+        text-decoration: none;
+        margin-right: 50px;
+        padding: 0px 350px 0 0;
+        text-align: right;
+}
+.panita {
+    text-align: left;
+    }
+    
+
 }
